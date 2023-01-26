@@ -224,7 +224,8 @@ public extension UIImage {
           // Will be 120 on devices with ProMotion display, 60 otherwise.
             let maximumFramesPerSecond = UIScreen.main.maximumFramesPerSecond
             if maximumFramesPerSecond == 120 {
-                displayRefreshRates.append(UIScreen.main.maximumFramesPerSecond)
+                displayRefreshRates.append(maximumFramesPerSecond)
+                displayRefreshFactors.insert(maximumFramesPerSecond, at: 0)
             }
         }
         // time interval per frame
